@@ -1,0 +1,52 @@
+@model Product
+
+@{
+    ViewData["Title"] = "Catalog";
+}
+
+@section Presentation
+{
+    <div id="presentation">
+        <p>Кофейня CoffeLike</p>
+    </div>
+}
+
+<div class="container-fluid">
+    <div class="bg_blue">
+        <div class="col-sm-12 col-xl-8 white_wrapper">
+            <h1>Каталог товаров</h1>
+            <form name="catalog" asp-controller="Product" asp-action="Edit" method="post">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" placeholder="Укажите название товар" />
+                    <div class="text-danger"><span asp-validation-for="Name"></span></div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price"></label>
+                    <input asp-for="Price" class="form-control" type="number" name="price" placeholder="Укажите цену" step="0.01" />
+                    <div class="text-danger"><span asp-validation-for="Price"></span></div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ProductType"></label>
+                    <select asp-for="ProductType" class="form-control" asp-items="Html.GetEnumSelectList<ProductType>()" ></select>
+                    <div class="text-danger"><span asp-validation-for="ProductType"></span></div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <textarea asp-for="Description" class="form-control" placeholder="Укажите описание товара"></textarea>
+                    <div class="text-danger"><span asp-validation-for="Description"></span></div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Provider"></label>
+                    <textarea asp-for="Provider" class="form-control" placeholder="Укажите информацию о поставщике"></textarea>
+                    <div class="text-danger"><span asp-validation-for="Provider"></span></div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                    <a asp-controller="Home" asp-action="Catalog">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

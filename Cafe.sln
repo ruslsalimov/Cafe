@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe", "Cafe\Cafe.csproj", "{EC4302BF-5BF3-40E8-9B94-CD5A8759BE08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe.Data", "Cafe.Data\Cafe.Data.csproj", "{75D22AA0-B2B1-41C8-A85C-076FAE462A2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe.Data.Models", "Cafe.Data.Models\Cafe.Data.Models.csproj", "{B0020BD0-27A0-47F7-8215-E9CBEEDFDEE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC4302BF-5BF3-40E8-9B94-CD5A8759BE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4302BF-5BF3-40E8-9B94-CD5A8759BE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4302BF-5BF3-40E8-9B94-CD5A8759BE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4302BF-5BF3-40E8-9B94-CD5A8759BE08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D22AA0-B2B1-41C8-A85C-076FAE462A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D22AA0-B2B1-41C8-A85C-076FAE462A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D22AA0-B2B1-41C8-A85C-076FAE462A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D22AA0-B2B1-41C8-A85C-076FAE462A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0020BD0-27A0-47F7-8215-E9CBEEDFDEE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0020BD0-27A0-47F7-8215-E9CBEEDFDEE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0020BD0-27A0-47F7-8215-E9CBEEDFDEE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0020BD0-27A0-47F7-8215-E9CBEEDFDEE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" asp-href-include="~/css/style.css">
+    <link rel="stylesheet" asp-href-include="~/lib/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul id="menu">
+            <li>
+                <a asp-action="Index">Главная</a>
+            </li>
+            <li>
+                <a asp-action="About">О нас</a>
+            </li>
+            <li>
+                <a asp-action="Menu">Меню</a>
+            </li>
+            <li>
+                <a asp-action="Products">Товары</a>
+            </li>
+            <li>
+                <a asp-action="Reviews">Отзывы</a>
+            </li>
+            <li>
+                <a href="signup.html">Регистрация</a>
+            </li>
+            <li>
+                <a href="signin.html">Авторизация</a>
+            </li>
+            <li>
+                <a asp-action="Catalog">Каталог</a>
+            </li>
+        </ul>
+    </nav>
+    @RenderSection("Presentation", false)
+</header>
+
+@RenderBody()
+
+</body>
+
+
+<footer>
+    <div>Copyright Salimov R. A.</div>
+</footer>
+
+</html>
