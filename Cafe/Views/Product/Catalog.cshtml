@@ -19,34 +19,6 @@
             {
                 <div class="alert alert-success">@TempData["message"]</div>
             }
-    @*         <form name="catalog" asp-controller="Product" asp-action="CreateProduct" method="post"> *@
-    @*             <div class="form-group"> *@
-    @*                 <label asp-for="Name"></label> *@
-    @*                 <input asp-for="Name" class="form-control" placeholder="Укажите название товар" /> *@
-    @*                 <div><span asp-validation-for="Name"></span></div> *@
-    @*             </div> *@
-    @*             <div class="form-group"> *@
-    @*                 <label asp-for="Price"></label> *@
-    @*                 <input asp-for="Price" class="form-control" type="number" name="price" placeholder="Укажите цену" step="0.01" /> *@
-    @*                 <div><span asp-validation-for="Price"></span></div> *@
-    @*             </div> *@
-    @*             <div class="form-group"> *@
-    @*                 <label asp-for="ProductType"></label> *@
-    @*                 <select asp-for="ProductType" class="form-control" asp-items="Html.GetEnumSelectList<ProductType>()" ></select> *@
-    @*                 <div><span asp-validation-for="ProductType"></span></div> *@
-    @*             </div> *@
-    @*             <div class="form-group"> *@
-    @*                 <label asp-for="Description"></label> *@
-    @*                 <textarea asp-for="Description" class="form-control" placeholder="Укажите описание товара"></textarea> *@
-    @*                 <div><span asp-validation-for="Description"></span></div> *@
-    @*             </div> *@
-    @*             <div class="form-group"> *@
-    @*                 <label asp-for="Provider"></label> *@
-    @*                 <textarea asp-for="Provider" class="form-control" placeholder="Укажите информацию о поставщике"></textarea> *@
-    @*                 <div><span asp-validation-for="Provider"></span></div> *@
-    @*             </div> *@
-    @*             <button type="submit" class="btn btn-dark">Создать позицию</button> *@
-    @*         </form> *@
             
             @{
                 var products = Model.GroupBy(p => p.ProductType);

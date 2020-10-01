@@ -1,8 +1,10 @@
 using Cafe.Data.Context;
+using Cafe.Data.Models.Models.Users;
 using Cafe.Data.Repositories;
 using Cafe.Data.Repositories.Abstract;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,10 +24,26 @@ namespace Cafe
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<MainContext>(options =>
-                options.UseMySql(connection));
+                options.UseMySql(
+                    Configuration["Data:Cafe:ConnectionString"]));
 
+            // Identity
+            services.AddDbContext<IdentityContext>(options =>
+                options.UseMySql(
+                    Configuration["Data:CafeIdentiy:ConnectionString"])
+                );
+            services.AddIdentity<User, IdentityRole>(opts =>
+            {
+                opts.User.RequireUniqueEmail = true;
+                opts.Password.RequiredLength = 6;
+                opts.Password.RequireNonAlphanumeric = false;
+                opts.Password.RequireLowercase = false;
+                opts.Password.RequireUppercase = false;
+                opts.Password.RequireDigit = false;
+            }).AddEntityFrameworkStores<IdentityContext>()
+                .AddDefaultTokenProviders();
+                
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddMvc();
         }
@@ -47,7 +65,8 @@ namespace Cafe
             app.UseStaticFiles();
 
             app.UseRouting();
-
+              
+            app.UseAuthentication();  
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -56,6 +75,8 @@ namespace Cafe
                     "default",
                     "{controller=Home}/{action=Index}/{id?}");
             });
+
+            IdentityContext.CreateAdminAccount(app.ApplicationServices, Configuration).Wait();
         }
     }
 }

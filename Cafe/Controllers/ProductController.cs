@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using Cafe.Data.Models.Models.Products;
 using Cafe.Data.Repositories.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cafe.Controllers
 {
-    // [Authorize]
+    [Authorize]
     public class ProductController : Controller
     {
         private IProductRepository _productRepository;
@@ -14,7 +15,11 @@ namespace Cafe.Controllers
         {
             _productRepository = productRepository;
         }
-
+        
+        
+        public ViewResult Catalog()
+            => View(_productRepository.GetAll());
+        
         public IEnumerable<Product> GetProducts()
             =>  _productRepository.GetAll();
 
@@ -29,7 +34,7 @@ namespace Cafe.Controllers
                 _productRepository.Add(product);
                 _productRepository.Commit();
                 TempData["message"] = $"{product.Name} добавлен";
-                return RedirectToAction("Catalog", "Home");
+                return RedirectToAction("Catalog");
             }
             else
             {
@@ -48,7 +53,7 @@ namespace Cafe.Controllers
                 _productRepository.Update(product);
                 _productRepository.Commit();
                 TempData["message"] = $"{product.Name} обновлено";
-                return RedirectToAction("Catalog", "Home");
+                return RedirectToAction("Catalog");
             }
             else
             {
@@ -72,7 +77,7 @@ namespace Cafe.Controllers
                 TempData["message"] = $"Продукт с id = {id.ToString()} отсутствует";
             }
             
-            return RedirectToAction("Catalog", "Home");
+            return RedirectToAction("Catalog");
         }
     }
 }

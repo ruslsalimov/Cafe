@@ -25,9 +25,6 @@ namespace Cafe.Controllers
             => View(_productRepository.GetAll());
     
         public ViewResult Reviews() => View();
-
-        public ViewResult Catalog()
-             => View(_productRepository.GetAll());
         
         
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

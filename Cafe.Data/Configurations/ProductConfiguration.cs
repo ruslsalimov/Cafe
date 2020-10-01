@@ -32,7 +32,8 @@ namespace Cafe.Data.Configurations
                 Name = "Марагоджип Никарагуа", Price = 589m,
                 Description = "Яркий вкус с оттенками красного яблока, пудры какао и цедрой апельсина",
                 Provider = "Никарагуа",
-                ProductType = ProductType.Coffee
+                ProductType = ProductType.Coffee,
+                FotoSrc = "/images/coffee.jpg"
             }, new Product
             {
                 Id = 2,
@@ -40,14 +41,16 @@ namespace Cafe.Data.Configurations
                 Description =
                     "Вкус без лишней кислотности с нотками жареных орехов, горького шоколада и карамели, ароматный и сбалансированный",
                 Provider = "Бразилия",
-                ProductType = ProductType.Coffee
+                ProductType = ProductType.Coffee,
+                FotoSrc = "/images/coffee.jpg"
             }, new Product
             {
                 Id = 3,
                 Name = "Гондурас Сан Маркос ", Price = 299m,
                 Description = "Плотный, насыщенный кофе с шоколадными оттенками и сильным теплом",
                 Provider = "Гондурас",
-                ProductType = ProductType.Coffee
+                ProductType = ProductType.Coffee,
+                FotoSrc = "/images/coffee.jpg"
             }, new Product
             {
                 Id = 4,
@@ -55,7 +58,8 @@ namespace Cafe.Data.Configurations
                 Description =
                     "Кофе средней крепости, с нотками шоколада, табака и специй и легкой цитрусовой кислотностью",
                 Provider = "Вьетнам",
-                ProductType = ProductType.Coffee
+                ProductType = ProductType.Coffee,
+                FotoSrc = "/images/coffee.jpg"
             }, new Product
             {
                 Id = 5,
@@ -63,28 +67,32 @@ namespace Cafe.Data.Configurations
                 Description =
                     "Сенча — самый популярный зеленый чай в Японии, на него приходится около 80% всего производящегося на территории страны чая",
                 Provider = "Япония",
-                ProductType = ProductType.Tea
+                ProductType = ProductType.Tea,
+                FotoSrc = "/images/tea.jpg"
             }, new Product
             {
                 Id = 6,
                 Name = "Чун Ми", Price = 489,
                 Description = "Классический зеленый чай из провинции Хунань",
                 Provider = "Китай",
-                ProductType = ProductType.Tea
+                ProductType = ProductType.Tea,
+                FotoSrc = "/images/tea.jpg"
             }, new Product
             {
                 Id = 7,
                 Name = "Молочный улун", Price = 679,
                 Description = "Молочный улун считается одним из самых популярных улунов во всем мире",
                 Provider = "Китай",
-                ProductType = ProductType.Tea
+                ProductType = ProductType.Tea,
+                FotoSrc = "/images/tea.jpg"
             }, new Product
             {
                 Id = 8,
                 Name = "Английский завтрак", Price = 699,
                 Description = "Терпкий вкус с пряными нотами и длительным цветочным",
                 Provider = "Индия",
-                ProductType = ProductType.Tea
+                ProductType = ProductType.Tea,
+                FotoSrc = "/images/tea.jpg"
             });
         }
     }

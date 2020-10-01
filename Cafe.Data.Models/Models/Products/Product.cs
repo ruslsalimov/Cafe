@@ -23,5 +23,7 @@ namespace Cafe.Data.Models.Models.Products
         
         [Required(ErrorMessage = "Введите описание поставщика")]
         public string Provider { get; set; }
+
+        public string FotoSrc { get; set; } = "/images/napitok.jpg";
     }
 }

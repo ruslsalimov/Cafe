@@ -16,7 +16,6 @@
         <div class="col-xl-10 white_wrapper">
             @{
                 var products = Model.GroupBy(p => p.ProductType);
-                int i = 0;
             }
             
             @foreach (var productType in products)
@@ -28,7 +27,7 @@
                     @foreach (var product in productType)
                     {
                         <div class="card">
-                            <img src="~/images/coffee.jpg" class="card-img-top" alt="Кофе">
+                            <img src="@product.FotoSrc" class="card-img-top" alt="Фотография напитка">
                             <div class="card-body">
                                 <h5 class="card-title">@product.Name</h5>
                                 <p class="card-text">@product.Description</p>
