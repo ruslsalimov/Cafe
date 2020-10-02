@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cafe.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admins")]
     public class ProductController : Controller
     {
         private IProductRepository _productRepository;

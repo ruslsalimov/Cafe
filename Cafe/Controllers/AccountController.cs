@@ -17,10 +17,10 @@ namespace Cafe.Controllers
         }
         
         [HttpGet]
-        public ViewResult Registeration() => View();
+        public ViewResult Registration() => View();
         
         [HttpPost]
-        public async Task<IActionResult> Registeration(RegisterViewModel model)
+        public async Task<IActionResult> Registration(RegisterViewModel model)
         {
             if(ModelState.IsValid)
             {

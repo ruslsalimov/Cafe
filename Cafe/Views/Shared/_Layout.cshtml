@@ -36,23 +36,23 @@
             @if (!User.Identity.IsAuthenticated)
             {
                 <li>
-                    <a asp-controller="Account" asp-action="Registeration">Регистрация</a>
+                    <a asp-controller="Account" asp-action="Registration">Регистрация</a>
                 </li>
                 <li>
                     <a asp-controller="Account" asp-action="Login">Авторизация</a>
                 </li>
+            }
+            else
+            {
                 @if (User.IsInRole("Admins"))
                 {
                     <li>
                         <a asp-controller="Product" asp-action="Catalog">Каталог</a>
                     </li>
                 }
-            }
-            else
-            {
                 <form id="btnExit" asp-controller="Account" asp-action="Logout" method="post">
-                    @User.Identity.Name
-                    <button class="btn btn-dark ml-3">Выйти</button>
+                    <span class="text-white">@User.Identity.Name</span>
+                    <button class="btn btn-outline-light ml-3">Выйти</button>
                 </form>
             }
             
