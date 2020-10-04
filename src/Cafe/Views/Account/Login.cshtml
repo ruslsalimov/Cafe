@@ -1,0 +1,21 @@
+@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Авторизация";
+}
+
+<main class="auth container-fluid">
+        <h1>Авторизация</h1>
+        <form asp-controller="Account" asp-action="Login" method="post" name="signin_frm" asp-route-returnUrl="@Model.ReturnUrl">
+            <div class="form-group row justify-content-center pt-3">
+                <label for="Email"></label>
+                <input asp-for="Email" class="form-control col-8 col-sm-4" placeholder="Введите ваш email">
+            </div>
+            <div class="form-group row justify-content-center pt-3">
+                <label for="Password"></label>
+                <input asp-for="Password" class="form-control col-8 col-sm-4 justify-content-center" placeholder="Введите ваш пароль">
+            </div>
+            <button type="submit" class="btn btn-light">Submit</button>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        </form>
+    </main>

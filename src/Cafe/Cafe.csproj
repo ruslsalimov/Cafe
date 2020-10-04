@@ -1,0 +1,84 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\LICENSE.md" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\alert.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\alert.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\button.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\button.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\carousel.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\carousel.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\collapse.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\collapse.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\dropdown.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\dropdown.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\index.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\index.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\modal.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\modal.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\popover.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\popover.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\scrollspy.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\scrollspy.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\tab.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\tab.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\toast.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\toast.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\tooltip.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\tooltip.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\util.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\dist\util.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\alert.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\button.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\carousel.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\collapse.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\dropdown.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\index.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\modal.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\popover.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\scrollspy.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\tab.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\toast.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\tools\sanitizer.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\tooltip.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\js\src\util.js" />
+      <_ContentIncludedByDefault Remove="Views\RoleAdmin\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\RoleAdmin\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Cafe.Data.Models\Cafe.Data.Models.csproj" />
+      <ProjectReference Include="..\Cafe.Data\Cafe.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\lib" />
+    </ItemGroup>
+
+</Project>
