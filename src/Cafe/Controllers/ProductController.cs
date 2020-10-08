@@ -31,10 +31,6 @@ namespace Cafe.Controllers
         {
             if (ModelState.IsValid)
             {
-                // if (product.FotoSrc == null)
-                // {
-                //     product.FotoSrc = "/images/napitok.jpg";
-                // }
                 _productRepository.Add(product);
                 _productRepository.Commit();
                 TempData["message"] = $"{product.Name} добавлен";
