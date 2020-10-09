@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial Narrow, serif;
+}
+
+h2, h1   {
+    text-align: center;
+    color: #6f4d43;
+}
+
+p {
+    line-height: 2;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-spacing: 0;
+}
+
+
+td {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.table_header {
+    background-color: #f1f1f1;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#menu {
+    list-style-type: none;
+    background-color: #4b3832;
+}
+
+#menu > li {
+    margin: 10px;
+    display: inline-block;
+}
+
+#menu > li > a {
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #bbaaa1;
+}
+
+#presentation {
+    background-image: url("../images/index-header-bg.jpg");
+    padding: 200px 0;
+    text-align: center;
+    color: #fff7ce;
+    line-height: 2;
+    font-size: 600%;
+    font-family: fantasy;
+}
+
+#btnExit {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;    
+}
+
+.bg_blue {
+    background-color: #66c6d0;
+    padding: 50px;
+}
+
+.white_wrapper {
+    padding: 20px;
+    border: 1px solid black;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.auth {
+    background-image: url("../images/index-header-bg.jpg");
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    text-align: center;
+}
+
+.review {
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.drinkCard {
+    position: relative;
+}
+
+.drinkPrice {
+    position: absolute;
+    bottom: 0; 
+    right: 10px
+}
+
+footer {
+    padding: 25px 0;
+    background-color: #423e3e;
+    color: #827164;
+    text-align: center;
+}
+
+main > .row > .col > img{
+    width: 100% ;
+}
