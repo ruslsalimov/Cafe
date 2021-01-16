@@ -25,12 +25,12 @@ namespace Cafe
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MainContext>(options =>
-                options.UseMySql(
+                options.UseNpgsql(
                     Configuration["Data:Cafe:ConnectionString"]));
 
             // Identity
             services.AddDbContext<IdentityContext>(options =>
-                options.UseMySql(
+                options.UseNpgsql(
                     Configuration["Data:CafeIdentiy:ConnectionString"])
                 );
             services.AddIdentity<User, IdentityRole>(opts =>

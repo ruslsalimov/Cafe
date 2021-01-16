@@ -16,7 +16,7 @@ namespace Cafe.Data.Configurations
             
             builder.Property(p => p.DateTime)
                 .IsRequired()
-                .HasDefaultValueSql("CURRENT_TIMESTAMP()");
+                .HasDefaultValueSql("now()");
         }
     }
 }
